@@ -1,11 +1,12 @@
+import { normalize, setupPage } from 'csstips';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-import './index.css';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root') as HTMLElement
-);
+import App from './components/App/App';
+import registerServiceWorker from './registerServiceWorker';
+
+normalize();
+setupPage('#root');
+
+ReactDOM.render(<App />, document.getElementById('root') as HTMLElement);
 registerServiceWorker();

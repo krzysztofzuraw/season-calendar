@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "csstips": "^0.2.3",
+    "csx": "^8.5.0",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
-    "react-scripts-ts": "2.14.0"
+    "react-scripts-ts": "2.14.0",
+    "typeface-playfair-display": "^0.0.54",
+    "typestyle": "^1.7.2"
   },
   "scripts": {
     "start": "react-scripts-ts start",
@@ -20,6 +24,7 @@
     "@types/react-dom": "^16.0.4",
     "prettier": "^1.11.1",
     "tslint-config-prettier": "^1.10.0",
+    "tslint-eslint-rules": "^5.1.0",
     "typescript": "^2.8.1"
   }
 }
