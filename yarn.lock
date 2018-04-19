@@ -16,6 +16,14 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
+"@glidejs/glide@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@glidejs/glide/-/glide-3.0.0.tgz#993c34e7f518aaff9fb944318b9d55f7ee8c7336"
+
+"@types/glidejs@^1.0.30":
+  version "1.0.30"
+  resolved "https://registry.yarnpkg.com/@types/glidejs/-/glidejs-1.0.30.tgz#41b2a67212f2542cb877b5e21a873b1477820418"
+
 "@types/jest@^22.2.2":
   version "22.2.2"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-22.2.2.tgz#afe5dacbd00d65325f52da0ed3e76e259629ac9d"

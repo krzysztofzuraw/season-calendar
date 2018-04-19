@@ -8,7 +8,8 @@ const root = style({
   color: '#8795A1',
   fontFamily: 'Lato',
   fontSize: '1em',
-  listStyle: 'none',
+  gridArea: 'main',
+  listStyle: 'none'
 });
 
 const item = style({

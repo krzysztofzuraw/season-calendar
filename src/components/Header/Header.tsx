@@ -5,12 +5,13 @@ const root = style({
   color: '#22292F',
   fontFamily: 'Playfair Display',
   fontSize: '2.25em',
+  gridArea: 'header',
   lineHeight: '48px',
   paddingBottom: '17px'
 });
 
-const MonthHeader = () => {
+const Header = () => {
   return <div className={root}>April</div>;
 };
 
-export default MonthHeader;
+export default Header;
