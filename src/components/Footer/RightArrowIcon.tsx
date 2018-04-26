@@ -3,6 +3,7 @@ import * as React from 'react';
 import { style } from 'typestyle';
 
 const root = style({
+  marginLeft: '16px',
   marginRight: '16px'
 });
 

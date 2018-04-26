@@ -10,8 +10,8 @@ const root = style({
   paddingBottom: '17px'
 });
 
-const Header = () => {
-  return <div className={root}>April</div>;
+const Header = ({ title }: { title: string }) => {
+  return <div className={root}>{title}</div>;
 };
 
 export default Header;

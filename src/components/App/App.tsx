@@ -27,11 +27,31 @@ const text = style({
   paddingBottom: '5px'
 });
 
-class App extends React.Component {
+export interface Food {
+  name: string;
+}
+interface State {
+  months: Array<{ id: number; food: Food[]; name: string }>;
+}
+
+class App extends React.Component<{}, State> {
+  constructor(props: {}) {
+    super(props);
+
+    this.state = {
+      months: [{ id: 1, name: 'January', food: [{ name: 'Apple' }] }]
+    };
+  }
+
+  public selectCurrentMonth(state: State) {
+    return state.months[0];
+  }
+
   public render() {
+    const currentMonth = this.selectCurrentMonth(this.state);
     return (
       <div className={root}>
-        <Header />
+        <Header title={currentMonth.name} />
         <div>
           <div className={text}>What to buy in Poland</div>
           <GroceriesList />
