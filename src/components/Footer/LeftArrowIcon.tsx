@@ -6,7 +6,7 @@ const root = style({
   marginRight: '16px'
 });
 
-const LeftArrowIcon = () => {
+const LeftArrowIcon = ({ handleClick }: { handleClick: () => void }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,6 +15,7 @@ const LeftArrowIcon = () => {
       height={16}
       className={root}
       fill="rgba(0, 0, 0, 0.11)"
+      onClick={handleClick}
     >
       <path d="M10 13h8V7h-8V2l-8 8 8 8v-5z" />
     </svg>

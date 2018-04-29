@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { style } from 'typestyle';
 
+import { Food } from '../../models';
+
 import ShoppingCartIcon from './ShoppingCartIcon';
 
 const root = style({
@@ -17,15 +19,15 @@ const item = style({
   paddingBottom: '16px'
 });
 
-const GroceriesList = () => {
+const GroceriesList = ({ foods }: { foods: Food[] }) => {
   return (
     <ul className={root}>
-      <li className={item}>
-        <ShoppingCartIcon />Carrot
-      </li>
-      <li className={item}>
-        <ShoppingCartIcon />Brocolli
-      </li>
+      {foods.map((food, id) => (
+        <li className={item} key={`${food}${id}`}>
+          <ShoppingCartIcon />
+          {food.name}
+        </li>
+      ))}
     </ul>
   );
 };

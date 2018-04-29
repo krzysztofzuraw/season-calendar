@@ -15,24 +15,33 @@ const monthsIndicator = style({
   display: 'flex'
 });
 
-const Footer = () => {
+const Footer = ({
+  activeMonth,
+  handleLeftArrowClick,
+  handleRightArrowClick
+}: {
+  activeMonth: number;
+  handleLeftArrowClick: () => void;
+  handleRightArrowClick: () => void;
+}) => {
   return (
     <div className={root}>
-      <LeftArrowIcon />
+      <LeftArrowIcon handleClick={handleLeftArrowClick} />
       <div className={monthsIndicator}>
-        <DotIcon />
-        <DotIcon />
-        <DotIcon />
-        <DotIcon active={true} />
-        <DotIcon />
-        <DotIcon />
-        <DotIcon />
-        <DotIcon />
-        <DotIcon />
-        <DotIcon />
-        <DotIcon />
+        <DotIcon active={activeMonth === 1 ? true : false} />
+        <DotIcon active={activeMonth === 2 ? true : false} />
+        <DotIcon active={activeMonth === 3 ? true : false} />
+        <DotIcon active={activeMonth === 4 ? true : false} />
+        <DotIcon active={activeMonth === 5 ? true : false} />
+        <DotIcon active={activeMonth === 6 ? true : false} />
+        <DotIcon active={activeMonth === 7 ? true : false} />
+        <DotIcon active={activeMonth === 8 ? true : false} />
+        <DotIcon active={activeMonth === 9 ? true : false} />
+        <DotIcon active={activeMonth === 10 ? true : false} />
+        <DotIcon active={activeMonth === 11 ? true : false} />
+        <DotIcon active={activeMonth === 12 ? true : false} />
       </div>
-      <RightArrowIcon />
+      <RightArrowIcon handleClick={handleRightArrowClick} />
     </div>
   );
 };
