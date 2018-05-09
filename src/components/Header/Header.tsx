@@ -3,7 +3,8 @@ import { style } from 'typestyle';
 
 const root = style({
   color: '#22292F',
-  fontFamily: 'Playfair Display',
+  fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, 
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
   fontSize: '2.25em',
   gridArea: 'header',
   lineHeight: '48px',

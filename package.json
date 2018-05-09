@@ -9,8 +9,6 @@
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "react-scripts-ts": "2.14.0",
-    "typeface-lato": "^0.0.54",
-    "typeface-playfair-display": "^0.0.54",
     "typestyle": "^1.7.2"
   },
   "scripts": {

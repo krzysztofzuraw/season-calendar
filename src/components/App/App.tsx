@@ -1,6 +1,4 @@
 import * as React from 'react';
-import 'typeface-lato';
-import 'typeface-playfair-display';
 import { style } from 'typestyle';
 
 import { Month } from '../../models';
@@ -22,7 +20,8 @@ const root = style({
 
 const text = style({
   color: '#606F7B',
-  fontFamily: 'Lato',
+  fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, 
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
   fontSize: '1.125em',
   gridArea: 'main',
   lineHeight: '22px',
@@ -40,20 +39,48 @@ class App extends React.Component<{}, State> {
 
     this.state = {
       months: [
-        { id: 1, name: 'January', foods: [{ name: 'Apple' }] },
-        { id: 2, name: 'February', foods: [{ name: 'Banana' }] },
-        { id: 3, name: 'March', foods: [{ name: 'Banana' }] },
-        { id: 4, name: 'April', foods: [{ name: 'Banana' }] },
-        { id: 5, name: 'May', foods: [{ name: 'Banana' }] },
-        { id: 6, name: 'June', foods: [{ name: 'Banana' }] },
-        { id: 7, name: 'July', foods: [{ name: 'Banana' }] },
-        { id: 8, name: 'August', foods: [{ name: 'Banana' }] },
-        { id: 9, name: 'September', foods: [{ name: 'Banana' }] },
-        { id: 10, name: 'October', foods: [{ name: 'Banana' }] },
-        { id: 11, name: 'November', foods: [{ name: 'Banana' }] },
-        { id: 12, name: 'December', foods: [{ name: 'Orange' }] }
+        { foods: [
+          { name: 'Marchew' },
+          {name: 'Orzechy włoskie'},
+          {name: 'Cebula'},
+          {name: 'Czosnek'} 
+        ], 
+          id: 1, 
+          name: 'Styczeń', 
+        },
+        { id: 2, name: 'Luty', foods: [{ name: 'Banana' }] },
+        { id: 3, name: 'Marzec', foods: [{ name: 'Banana' }] },
+        { id: 4, name: 'Kwiecień', foods: [{ name: 'Banana' }] },
+        {
+          foods: [
+            {name: 'Truskawki'},
+            {name: 'Agrest'},
+            {name: 'Gruszki'},
+            {name: 'Jabłka'},
+            {name: 'Groszek cukrowy'},
+            {name: 'Fasola'},
+            {name: 'Orzechy laskowe'},
+            {name: 'Orzechy włoskie'},
+            {name: 'Marchew'},
+            {name: 'Czosnek'},
+            {name: 'Cebula'},
+            {name: 'Pomidor'},
+            {name: 'Rzodkiewka'},
+            {name: 'Ogórek'},
+            {name: 'Burak cwikłowy'}
+          ],
+          id: 5,
+          name: 'Maj'
+        },
+        { id: 6, name: 'Czerwiec', foods: [{ name: 'Banana' }] },
+        { id: 7, name: 'Lipiec', foods: [{ name: 'Banana' }] },
+        { id: 8, name: 'Sierpień', foods: [{ name: 'Banana' }] },
+        { id: 9, name: 'Wrzesień', foods: [{ name: 'Banana' }] },
+        { id: 10, name: 'Pazdziernik', foods: [{ name: 'Banana' }] },
+        { id: 11, name: 'Listopad', foods: [{ name: 'Banana' }] },
+        { id: 12, name: 'Grudzień', foods: [{ name: 'Orange' }] }
       ],
-      selectedMonth: 1
+      selectedMonth: new Date().getMonth() + 1
     };
 
     this.handleGoToPrevMonth = this.handleGoToPrevMonth.bind(this);
@@ -87,7 +114,7 @@ class App extends React.Component<{}, State> {
       <div className={root}>
         <Header title={currentMonth.name} />
         <div>
-          <div className={text}>What to buy in Poland</div>
+          <div className={text}>Co kupić w Polsce</div>
           <GroceriesList foods={currentMonth.foods} />
         </div>
         <Footer
